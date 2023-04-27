@@ -1,0 +1,13 @@
+<h3><a href="{% url 'index' %}">Home</a></h3>
+
+{% load custom_tags %}
+
+<p>Main menu</p>
+{% draw_menu 'main_menu' address %}
+<p>Another nemu</p>
+{% draw_menu 'another_menu' address %}
+<p>Current page</p>
+{% block content %}{% endblock content %}
+
+
+

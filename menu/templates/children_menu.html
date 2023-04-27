@@ -1,0 +1,10 @@
+{% load custom_tags %}
+
+<ul>{% for i in menu %}
+    {% if item == i.parent.name %}
+            {% check_address i.name address %}
+        {% if i.name in address_list %}
+            {% children_menu menu i.name address address_list %}
+        {% endif %}
+    {% endif %}
+{% endfor %}</ul>
